@@ -2,11 +2,21 @@ package main.java.TP4.console;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "AssuranceVie")
 public class AssuranceVie extends Compte
 {
+	@Id
 	private int id = 0;
+	@Column(name = "DATE_FIN", nullable = false)
 	private LocalDate dateFin;
-	private int taux = 0;
+	@Column(name = "TAUX", nullable = false)
+	private double taux = 0.0d;
 	
 	public AssuranceVie()
 	{
@@ -31,7 +41,7 @@ public class AssuranceVie extends Compte
 		this.dateFin = pDateFin;
 	}
 	
-	public void setTaux(int pTaux)
+	public void setTaux(double pTaux)
 	{
 		this.taux = pTaux;
 	}
@@ -46,7 +56,7 @@ public class AssuranceVie extends Compte
 		return this.dateFin;
 	}
 	
-	public int getTaux()
+	public double getTaux()
 	{
 		return this.taux;
 	}
