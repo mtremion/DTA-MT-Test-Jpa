@@ -1,8 +1,8 @@
-package main.java.TP2.service;
+package TP2.service;
 
 import javax.persistence.EntityManager;
 
-import main.java.TP2.console.Livre;
+import TP2.console.Livre;
 
 public class LivreService 
 {

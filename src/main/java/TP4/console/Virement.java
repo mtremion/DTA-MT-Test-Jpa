@@ -1,4 +1,6 @@
-package main.java.TP4.console;
+package TP4.console;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,14 +11,18 @@ import javax.persistence.Table;
 @Table(name = "Virement")
 public class Virement extends Operation
 {
-	@Id
-	private int id = 0;
 	@Column(name = "BENEFICIAIRE",length = 100, nullable = false)
 	private String beneficiaire = "";
 	
 	public Virement()
 	{
 		
+	}
+	
+	public Virement(LocalDateTime pDate, double pMontant, String pMotif,String pBeneficiaire)
+	{
+		super(pDate,pMontant,pMotif);
+		this.beneficiaire = pBeneficiaire;
 	}
 	
 	public String toString()
@@ -26,20 +32,11 @@ public class Virement extends Operation
 				+ "\nBénéficiaire : "+this.getBeneficiaire();
 	}
 	
-	public void setId(int pId)
-	{
-		this.id = pId;
-	}
-	
 	public void setBeneficiaire(String pBeneficiaire)
 	{
 		this.beneficiaire = pBeneficiaire;
 	}
-	
-	public int getId()
-	{
-		return this.id;
-	}
+
 	
 	public String getBeneficiaire()
 	{

@@ -1,4 +1,4 @@
-package main.java.TP2.console;
+package TP2.console;
 
 import java.util.List;
 

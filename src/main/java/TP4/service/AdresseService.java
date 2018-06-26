@@ -1,4 +1,4 @@
-package main.java.TP4.service;
+package TP4.service;
 
 import javax.persistence.EntityManager;
 

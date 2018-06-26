@@ -1,4 +1,4 @@
-package main.java.TP4.console;
+package TP4.console;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +9,6 @@ import javax.persistence.Table;
 @Table(name = "LivretA")
 public class LivretA extends Compte
 {
-	@Id
-	private int id = 0;
 	@Column(name = "TAUX", nullable = false)
 	private double taux = 0.0d;
 	
@@ -19,26 +17,22 @@ public class LivretA extends Compte
 		
 	}
 	
+	LivretA(int pNumero, double pSolde,double pTaux)
+	{
+		super(pNumero, pSolde);
+		this.taux = pTaux;
+	}
+	
 	public String toString()
 	{
 		return "Je suis un Livret A :"
 				+ "\nId : "+this.getId()
 				+ "\nTaux : "+this.getTaux();
 	}
-	
-	public void setId(int pId)
-	{
-		this.id = pId;
-	}
-	
+
 	public void setTaux(double pTaux)
 	{
 		this.taux = pTaux;
-	}
-	
-	public int getId()
-	{
-		return this.id;
 	}
 	
 	public double getTaux()

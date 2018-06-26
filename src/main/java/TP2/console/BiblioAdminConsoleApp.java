@@ -1,4 +1,4 @@
-package main.java.TP2.console;
+package TP2.console;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import main.java.TP2.service.ClientService;
-import main.java.TP2.service.EmpruntService;
-import main.java.TP2.service.LivreService;
+import TP2.service.ClientService;
+import TP2.service.EmpruntService;
+import TP2.service.LivreService;
 
 public class BiblioAdminConsoleApp
 {
